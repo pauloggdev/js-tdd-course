@@ -7,19 +7,13 @@
     "lint": "npx eslint src/*.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "husky": {
-      "hooks": {
-         "pre-push": "npm run lint"
-       }
-     },
-     "lint-prepush": {
-       "base": "main",
-        "tasks": {
-          "*.js": [
-            "eslint"
-          ]
-        }
-    },
+  "lint-prepush": {
+    "tasks": {
+      "*.js": [
+        "npm run lint"
+      ]
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pauloggdev/js-tdd-course.git"
@@ -36,8 +30,9 @@
   },
   "homepage": "https://github.com/pauloggdev/js-tdd-course#readme",
   "devDependencies": {
-    "eslint": "^8.31.0",
-    "husky": "^8.0.3",
+    "eslint": "^8.31.0"
+  },
+  "dependencies": {
     "lint-prepush": "^2.2.1"
   }
 }
