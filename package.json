@@ -5,9 +5,13 @@
   "main": "index.js",
   "scripts": {
     "lint":"npx eslint src/*.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepush": "npm run lint"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "husky": {
+    "hooks": {
+        "pre-push": "npm run lint"       
+  }
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pauloggdev/js-tdd-course.git"
