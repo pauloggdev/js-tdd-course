@@ -2,17 +2,11 @@
   "name": "js-tdd-course",
   "version": "1.0.0",
   "description": "Nossa biblioteca do curso de JS com TDD na prática",
-  "main": "main.js",
+  "main": "index.js",
   "scripts": {
     "lint": "npx eslint src/*.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "lint-prepush": {
-    "tasks": {
-      "*.js": [
-        "npm run lint"
-      ]
-    }
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -30,9 +24,7 @@
   },
   "homepage": "https://github.com/pauloggdev/js-tdd-course#readme",
   "devDependencies": {
-    "eslint": "^8.31.0"
-  },
-  "dependencies": {
-    "lint-prepush": "^2.2.1"
+    "eslint": "^8.31.0",
+    "husky": "^8.0.3"
   }
 }
