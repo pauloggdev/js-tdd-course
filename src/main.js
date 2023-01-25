@@ -1,8 +1,7 @@
-const a = 3;
-const b = 10;
-const c = "klkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkklkkklllllllllllllllkkkkkkkkkkkkkkkkkkkkkkkkk";
+const sum = (num1, num2) => num1 + num2;
+const sub = (num1, num2) => num1 - num2;
+const mult = (num1, num2) => num1 * num2;
+const div = (num1, num2) => (num2 === 0) ? `Não possivel dividir por 0` : num1 / num2
 
-const d = 0;
-console.log( a,b, c, d)
 
-    
+export { sum, sub, mult, div }

@@ -1,0 +1,59 @@
+var expect = require('chai').expect;
+
+describe('Main', function () {
+
+    // roda uma vez, antes do bloco
+    /*
+    before(function(){
+        console.log("before")
+    });
+    // roda uma vez, depois do bloco
+    after(function(){
+        console.log("after")
+    });
+     */
+    //roda todas vezes, antes de cada bloco
+    var arr;
+    beforeEach(function () {
+        arr = [1, 2, 3]
+    });
+    /*
+   //Roda todas vezes, depois de cada bloco
+   afterEach(function(){
+       console.log("afterEach")
+   })
+   */
+    describe('Metodo A', function () {
+        context.only('Case 1', function () {
+
+            it('verificar se o array está com tamanho 4', function () {
+                arr.push(4)
+                expect(arr).to.have.length(4)
+            })
+        })
+        context('Case 2', function () {
+
+            it('should happen blabla', function () {
+
+                throw new Error('just an error');
+
+            })
+
+        })
+    })
+    describe('Metodo B', function () {
+
+        context('Case 1', function () {
+
+            it('should happen blabla', function () {
+
+                throw new Error('just an error');
+
+            })
+
+        })
+
+
+    })
+
+})
