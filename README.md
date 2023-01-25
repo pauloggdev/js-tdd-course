@@ -1,6 +1,6 @@
-# Project Title
+# Spotify wrapper
 
-One Paragraph of project description goes here
+A wrapper work with spotify Web API(LINK)
 
 ## Getting Started
 

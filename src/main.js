@@ -1,8 +1,10 @@
-const a = 3;
-const b = 10;
-const c = "klkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkklkkklllllllllllllllkkkkkkkkkkkkkkkkkkkkkkkkk";
+const search = (query, type) => {
+    fetch(`https://api.spotify.com/v1/search=?q=${query}&type=${type}`)
+        .then(data => data.json())
+}
+const searchAlbums = () => { }
+const searchArtists = () => { }
+const searchTracks = () => { }
+const searchPlayLists = () => { }
 
-const d = 0;
-console.log( a,b, c, d)
-
-    
+export { search, searchAlbums, searchArtists, searchTracks, searchPlayLists }
